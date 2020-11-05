@@ -9,7 +9,7 @@ function Calc($input)
 {
 	do
 	{
-		echo 'Введите ещё одно число:';
+		echo 'Введите следующее число:';
 		$numb = GetNumb();
 		$input = $input + $numb;
 		echo 'Сумма чисел равна: '.$input, PHP_EOL;
