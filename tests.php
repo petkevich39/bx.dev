@@ -1,16 +1,25 @@
 <?php
-function assertEquals($expectedResult, $result, $message) : bool
-{
-	echo PHP_EOL;
+require_once ('read.php');
 
-	if ((int)$expectedResult == (int)$result)
-	{
-		echo "Test: {$message} - passed" . PHP_EOL;
-		return true;
+function assertEquals($dreamval, $result, $msg){
+	if($dreamval === $result){
+		echo $msg . ' - passed';
 	}
 	else
 	{
-		echo "Test: {$message} - failed" . PHP_EOL;
-		return false;
+		echo $msg . ' - failed';
 	}
+
 }
+
+//readFromConsole('', '');
+
+$result = readFromConsole('', '!stop');
+assertEquals(null, $result, 'Test: !stop = null');
+
+// * readFromConsole('', 'true') - true;
+// * readFromConsole('', 'false') - false;
+// * readFromConsole('', '!stop') - null;
+// * readFromConsole('', '1.3') - 1.3;
+// * readFromConsole('', '1') - 1;
+// * readFromConsole('', 'test') = 'test;
