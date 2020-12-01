@@ -66,7 +66,7 @@ $result = countMaxInt('stop');
 assertEquals('stop', $result, 'Результат: стоп');
 
 $result = countMaxInt('20 20 ert 12');
-assertEquals(null, $result, 'Результат: какая-то строка');
+assertEquals(null, $result, 'Результат: какая-то строка ');
 
 $result = countMaxInt('1 3 3 1 0.5');
 assertEquals(null, $result, 'Результат: не целое число');

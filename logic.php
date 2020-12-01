@@ -16,7 +16,7 @@ class QueensMove
 		$this->fromX = (int)$arr[0];
 		$this->fromY = (int)$arr[1];
 		$this->toX = (int)$arr[2];
-		$this->toY = (int)$arr[3];                        //задаем строку и столбец для клеток
+		$this->toY = (int)$arr[3];                     //задаем строку и столбец для клеток
 	}
 
 	public function getDirection()                    // Узнаем продвинемся или нет
