@@ -1,82 +1,73 @@
 <?php include_once 'header.php';?>
 
-<section class="bg-blue">
-	<div class="container d-flex justify-content-center">
-		<div class="bx-block text-center">
-			<div><h1>Long headline for two lines for attention and evolving</h1></div>
-			<div>
-				<h4>With the new AirPlay 2, you can control your home audio system
-				and the speakers throughout your house.4 You can play a song in
-					the living room and your kitchen at the same time.</h4>
-			</div>
-			<div class="bx-imgs d-flex align-items-center justify-content-center">
-				<img src="./img/paypal.svg" alt="" title=""/>
-				<img src="./img/andr-pay.svg" alt="" title=""/>
-				<img src="./img/appl-pay.svg" alt="" title=""/>
-				<img src="./img/sams-pay.svg" alt="" title=""/>
-			</div>
-		</div>
-	</div>
-</section>
-<section>
-	<div class="container">
-		<div class="d-flex mob-block align-items-center pad-top-60 pad-bot-60">
-			<div class="col-6">
-				<div class="bx-block">
-					<div class="ff-bold-56 pad-bot-24">Medium length display headline</div>
-					<div class="ff-normal-18 pad-bot-43">
-						Separated they live in Bookmarks
-						right at the coast of the famous
-						Semantics, large language ocean
-						Separated they live in Bookmarks
-						right
-					</div>
-					<div class="ff-normal-18">
-						<a href="javascript:void(0);">Action link</a>
-					</div>
+<section class="bg-main d-flex align-items-center">
+	<div class="overlay_block"></div>
+	<div class="container d-flex justify-content-center position-relative">
+		<div class="row">
+			<div class="col-12 white">
+				<h1 class="mgb-64">Value Proposition</h1>
+				<div class="text-center ff-normal-20">
+					Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit,
+					sed do eiusmod tempor incididunt<br>ut labore et dolore magna aliqua.
+				</div>
+				<div class="text-center">
+					<a class="d-inline-flex" href="auth.php"><div class="btn ff-normal-18 bg-orange"><b>Start free trial</b></div></a>
 				</div>
 			</div>
-			<div class="col-6">
-				<div class="bx-video"></div>
+		</div>
+	</div>
+</section>
+<section class="container">
+	<div class="row bx-motos">
+		<div class="col-12 text-center">
+			<br/><br/><br/>
+			<div class="ff-normal-24">Your Best Value Proposition</div>
+			<br/>
+			<div class="ff-normal-18">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+				sed do eiusmod tempor incididunt ut labore<br/>et dolore magna aliqua.
+				Ut enim ad minim veniam,
+			</div>
+			<br/><br/><br/>
+		</div>
+		<div class="col-12 col-md-6 col-lg-4">
+			<div><img src="./img/moto_1.png" alt="moto_1" title="moto_1"/></div>
+			<div class="ff-normal-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+			<div class="bx-link"><a class="ff-normal-14 underline" href="detail.php">Learn More</a> </div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-4">
+			<div><img src="./img/moto_2.png" alt="moto_2" title="moto_2"/></div>
+			<div class="ff-normal-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+			<div class="bx-link"><a class="ff-normal-14 underline" href="detail.php">Learn More</a> </div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-4">
+			<div><img src="./img/moto_3.png" alt="moto_3" title="moto_3"/></div>
+			<div class="ff-normal-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+			<div class="bx-link"><a class="ff-normal-14 underline" href="detail.php">Learn More</a> </div>
+		</div>
+	</div>
+	<br/><br/><br/><br/>
+	<div class="row">
+		<div class="col-12 col-lg-6 bx-about-moto d-flex align-items-center justify-content-end">
+			<div class="bx-wrap">
+				<div class="ff-bold-20">Feature that is amazing</div>
+				<br/>
+				<div>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+					sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua.
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<section>
-	<div class="container">
-		<div class="pad-top-40 pad-bot-40">
-			<h3>Medium Length Title</h3>
-		</div>
-		<div>
-			<h4><b>Medium length headline</b></h4>
-			<br/>
-			<p>By creating an Account on our service, you agree to <a href="javascript:void(0);">
-			subscribe to newsletters,</a>marketing or promotional materials and other information
-			we may send. However, you may opt out of receiving any, or all, of these communications
-			from us by following the unsubscribe link or instructions provided in any email we send.</p>
-			<br/>
-			<h4><b>Medium length headline</b></h4>
-			<br/>
-			<p>However, you may opt out of receiving any, or all, of these communications from us by
-			following the unsubscribe link or instructions provided in any email we send.</p>
-			<br/>
-			<p>By creating an Account on our service, you agree to subscribe to newsletters, marketing
-			or promotional materials and other information we may send. However, you may opt out of
-			receiving any, or all, of these communications from us by following the unsubscribe link
-			or instructions provided in any email we send. You understand that your content
-			(<a href="javascript:void(0);">not including credit card information</a>), may be transferred
-			unencrypted and involve (a) transmissions over various networks; and (b) changes to conform
-			and adapt to technical requirements of connecting networks or devices. Credit card
-			information is always encrypted during transfer over networks.</p>
-			<br/>
-			<ul class="pad-bot-174">
-				<li>Showcase and embed your work with</li>
-				<li>Publish across social channels in a click</li>
-				<li>Publish across social channels in a click</li>
-				<li>Publish across social channels in a click</li>
-			</ul>
+		<div class="col-12 col-lg-6 bx-about-moto-img">
+			<div class="text-center"><img src="./img/moto_4.png"/></div>
 		</div>
 	</div>
+	<br/><br/><br/><br/><br/><br/>
 </section>
+
 
 <?include_once 'footer.php';?>
