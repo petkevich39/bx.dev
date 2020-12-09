@@ -8,10 +8,15 @@ class QueensMove
 	{
 		if ($move === "")
 		{
-			echo 'Привет!Ходите, через запятую 4 цифры от 1-8!'.PHP_EOL;
-			$move = trim(fgets(STDIN));        //получаем ход
+			echo 'Привет!Ходите, через запятую 2 цифры от 1-8 для начальной позиции!'.PHP_EOL;
+			$from = trim(fgets(STDIN));
+			$arr = explode(",", $from);
+			echo 'Привет!Ходите, через запятую 2 цифры от 1-8 для конечной позиции!'.PHP_EOL;
+			$to = trim(fgets(STDIN));//получаем ход
+			$arr[] = explode(",", $to);
+		} else {
+			$arr = explode(",", $move);
 		}
-		$arr = explode(",", $move);
 
 		$this->fromX = (int)$arr[0];
 		$this->fromY = (int)$arr[1];
@@ -23,26 +28,22 @@ class QueensMove
 	{
 		if ($this->fromX === $this->toX)
 		{
-			echo 'Да!'.PHP_EOL; //vertic
-
-			return 'vertic';
+			echo PHP_EOL.'ДА!';
+			return true;
 		}
 		elseif ($this->fromY === $this->toY)
 		{
-			echo 'Да!'.PHP_EOL; //horiz
-
-			return 'horiz';
+			echo PHP_EOL.'ДА!';
+			return true;
 		}
 		elseif ($this->fromY - $this->fromX === $this->toY - $this->toX)
 		{
-			echo 'Да!'.PHP_EOL; //diag
-
-			return 'diag';
+			echo PHP_EOL.'ДА!';
+			return true;
 		}
 		else
 		{
-			echo 'Нет!'.PHP_EOL;
-
+			echo PHP_EOL.'НЕТ!';
 			return false;
 		}
 	}
@@ -54,11 +55,11 @@ function assertEquals($dreamval, $result, $message)
 
 	if ($dreamval === $result)
 	{
-		echo $message.' - passed'.PHP_EOL.PHP_EOL;
+		echo $message.' - passed';
 	}
 	else
 	{
-		echo $message.' - failed'.PHP_EOL.PHP_EOL;
+		echo $message.' - failed';
 	}
 
 }
@@ -68,16 +69,16 @@ function assertEquals($dreamval, $result, $message)
 
 $steep = new QueensMove("1,1,2,5");
 $result = $steep->getDirection();
-assertEquals(false, $result, 'Результат: неправильный ход!');
+assertEquals(false, $result, '');
 
 $steep = new QueensMove("1,1,1,5");
 $result = $steep->getDirection();
-assertEquals('vertic', $result, 'Результат: вертикальный ход!');
+assertEquals(true, $result, '');
 
 $steep = new QueensMove("1,1,5,1");
 $result = $steep->getDirection();
-assertEquals('horiz', $result, 'Результат: горизонтальный ход!');
+assertEquals(true, $result, '');
 
 $steep = new QueensMove("1,1,8,8");
 $result = $steep->getDirection();
-assertEquals('diag', $result, 'Результат: диагональный ход!');
+assertEquals(true, $result, '');
