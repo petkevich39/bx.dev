@@ -8,9 +8,9 @@ create table store
 show tables from dev;
 
 insert into store (ID, CITY)
-values (1, 'Калининград'),
-       (2, 'Черняховск'),
-       (3, 'Советск');
+values (1, 'РљР°Р»РёРЅРёРЅРіСЂР°Рґ'),
+       (2, 'Р§РµСЂРЅСЏС…РѕРІСЃРє'),
+       (3, 'РЎРѕРІРµС‚СЃРє');
 
 create table book_store
 (
