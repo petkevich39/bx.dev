@@ -1,3 +1,4 @@
+#1Подсчитать количество книг каждого автора (наименований). Столбцы ответа: Имя автора, общее количество книг
 SELECT name, sum(quantity)
 FROM book_store b
 	     inner join author_book ab on b.BOOK_ID = ab.BOOK_ID
@@ -5,6 +6,7 @@ FROM book_store b
 GROUP BY name;
 
 
+#2Подсчитать суммарный остаток книг каждого автора во всех магазинах. Столбцы ответа: Имя автора, Город магазина, Суммарный остаток книг
 select NAME,
        CITY,
        SUM(QUANTITY)
@@ -14,7 +16,7 @@ from book_store bs
 	     inner join author a on ab.AUTHOR_ID = a.ID
 group by NAME, CITY;
 
-
+#3Вывести среднюю стоимость книг издательства «Азбука». Столбцы ответа: Название книги, средняя стоимость.
 select NAME,
        AVG(PRICE)
 from book_store bs
@@ -22,7 +24,7 @@ from book_store bs
 where PUBLISHER_ID = 3
 group by NAME;
 
-
+#4Вывести среднюю стоимость книг издательства «Азбука» в каждом магазине. Столбцы ответа: Город, Название книги, средняя стоимость
 select CITY,
        NAME,
        AVG(PRICE)
@@ -32,7 +34,7 @@ from book_store bs
 where PUBLISHER_ID = 3
 group by CITY, NAME;
 
-
+#5Вывести разницу между остатком книг в Калининграде и Черняховске. Столбцы ответа: Название книги, остаток в Калининграде, остаток в Черняховске, Разница.
 select NAME,
        bs1.QUANTITY as QUANTITY_KLD,
        bs2.QUANTITY as QUANTITY_CHRN,
