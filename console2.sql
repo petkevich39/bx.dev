@@ -1,8 +1,8 @@
 #1Подсчитать количество книг каждого автора (наименований). Столбцы ответа: Имя автора, общее количество книг
-SELECT name, sum(quantity)
-FROM book_store b
-	     inner join author_book ab on b.BOOK_ID = ab.BOOK_ID
-	     inner join author a on ab.AUTHOR_ID = a.ID
+SELECT a.NAME, count(b.NAME)
+FROM book b
+	     inner join author_book ab on b.ID = ab.AUTHOR_ID
+	     inner join author a on a.ID = ab.AUTHOR_ID
 GROUP BY name;
 
 
@@ -37,9 +37,9 @@ group by CITY, NAME;
 #5Вывести разницу между остатком книг в Калининграде и Черняховске. Столбцы ответа: Название книги, остаток в Калининграде, остаток в Черняховске, Разница.
 select NAME,
        bs1.QUANTITY as QUANTITY_KLD,
-       bs2.QUANTITY as QUANTITY_CHRN,
-       ABS(bs1.QUANTITY - bs2.QUANTITY) as VARIANCE
+       COALESCE(bs2.QUANTITY, 0) as QUANTITY_CHRN,
+       ABS(bs1.QUANTITY - COALESCE(bs2.QUANTITY, 0)) as VARIANCE
 from book
 	     inner join book_store bs1 on book.ID = bs1.BOOK_ID and bs1.STORE_ID = 1
-	     inner join book_store bs2 on book.ID = bs2.BOOK_ID and bs2.STORE_ID = 2
-order by NAME, QUANTITY_KLD, QUANTITY_CHRN, VARIANCE;
+	     left join book_store bs2 on book.ID = bs2.BOOK_ID and bs2.STORE_ID = 2
+order by NAME, QUANTITY_KLD, VARIANCE;
